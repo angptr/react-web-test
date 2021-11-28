@@ -15,8 +15,7 @@ const ListFlower = () =>  {
     const [flowers, setFlowers] = useState<Flower[]>([]);
     const [count, setCount] = useState(0);
 
-    React.useEffect(() => {                  
-
+    React.useEffect(() => {
         async function fetchData() {
             const res = await FlowerService.getFlowers();            
             setFlowers(res.data);
